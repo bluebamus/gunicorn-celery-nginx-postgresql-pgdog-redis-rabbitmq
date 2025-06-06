@@ -1,0 +1,17 @@
+[[users]]
+username = "app_user"
+password = "securepassword"
+roles = ["superuser"]
+databases = ["app_db"]
+
+[[users]]
+username = "readonly_user"
+password = "readonly_pass"
+roles = ["read"]
+databases = ["app_db"]
+
+[[users]]
+username = "writer_user"
+password = "writer_pass"
+roles = ["read", "write"]
+databases = ["app_db"]

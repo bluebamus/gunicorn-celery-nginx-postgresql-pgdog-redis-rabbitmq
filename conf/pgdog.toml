@@ -1,0 +1,24 @@
+[[databases]]
+name = "app_db"
+host = "db"
+port = 5432
+user = "app_user"
+password = "securepassword"
+sslmode = "disable"
+connect_timeout = 5
+
+[init]
+create_if_missing = false
+run_migrations = false
+seed_data = false
+
+[backups]
+enabled = true
+path = "/pgdog/backups"
+frequency = "daily"
+retain = 7
+
+[monitoring]
+enabled = true
+health_check_interval = 30
+alert_email = "admin@example.com"
